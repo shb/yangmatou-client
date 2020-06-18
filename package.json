@@ -1,0 +1,34 @@
+{
+  "name": "yangmatou-client",
+  "version": "0.0.1",
+  "description": "JS client for YangMatou marketplace APIs",
+  "main": "index.js",
+  "author": "Simone Cociancich <simone.cociancich@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/shb/yangmatou-client.git"
+  },
+  "scripts": {
+    "test": "jest src/",
+    "test:integration": "jest --env=node test/",
+    "build": "yarn build:types && yarn build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src -d ./ --extensions '.ts' --ignore 'src/**/*.spec.ts'"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "md5": "^2.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-regenerator": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-typescript": "^7.8.3",
+    "jest": "^26.0.1",
+    "moment": "^2.26.0",
+    "sinon": "^9.0.2",
+    "typescript": "~3.8.3"
+  }
+}
