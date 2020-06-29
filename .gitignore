@@ -1,1 +1,3 @@
+*.d.js
 node_modules/
+tsconfig.tsbuildinfo

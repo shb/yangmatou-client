@@ -1,8 +1,8 @@
 import sinon from 'sinon'
 
 import YMClient from './YMClient'
-import { HttpRequest } from './HttpRequest'
 import Md5Signature from './Md5Signature'
+import { HttpRequest } from './types'
 
 describe('YMClient request', () => {
   const app_id = 'zWYVVFagTfenOHDPTm'
