@@ -1,5 +1,6 @@
 import { HttpRequest } from './types';
 import Md5Signature from './Md5Signature';
+import { RequestDTO, RequestMethod } from '..';
 export default class YMClient {
     private app_id;
     private auth_code;
@@ -10,7 +11,7 @@ export default class YMClient {
         signature: Md5Signature;
     });
     get appId(): string;
-    request(method: string, bizContent: object): HttpRequest;
+    request<T extends RequestMethod>(method: T, bizContent: RequestDTO[T]): HttpRequest;
     private getNonce;
     private getTimestamp;
 }

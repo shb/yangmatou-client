@@ -2,6 +2,7 @@ import moment from 'moment'
 
 import { HttpRequest } from './types'
 import Md5Signature, { YMRequest } from './Md5Signature'
+import { RequestDTO, RequestMethod } from '..'
 
 export default class YMClient {
   private app_id: string
@@ -18,7 +19,7 @@ export default class YMClient {
     return this.app_id
   }
 
-  request(method: string, bizContent: object): HttpRequest {
+  request<T extends RequestMethod>(method: T, bizContent: RequestDTO[T]): HttpRequest {
     const body = {
       auth_code: this.auth_code,
       biz_content: JSON.stringify(bizContent),
