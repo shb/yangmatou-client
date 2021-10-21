@@ -1,6 +1,6 @@
 {
   "name": "yangmatou-client",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "JS client for YangMatou marketplace APIs",
   "main": "index.js",
   "author": "Simone Cociancich <simone.cociancich@gmail.com>",
@@ -16,7 +16,7 @@
     "build:js": "babel src -d ./ --extensions '.ts' --ignore 'src/**/*.spec.ts'"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.2",
     "md5": "^2.2.1"
   },
   "devDependencies": {

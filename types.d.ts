@@ -16,11 +16,47 @@ export declare type RequestDTO = {
     'ymatou.product.detail.get': any;
     'ymatou.order.list.get': any;
     'ymatou.sku.stock.update': {
-        sku_stocks: SKuStock[];
+        sku_stocks: SkuStock[];
     };
     'ymatou.sku.price.update': any;
 };
-export declare type SKuStock = {
+export declare type ProductInfo = {
+    category_name: string;
+    product_url: string;
+    skus: Array<{
+        extra_info?: unknown;
+        weight_unit: number;
+        price: number;
+        stock_num: number;
+        weight: number;
+        new_price: number;
+        sku_id: string;
+        used: boolean;
+        vip_price: number;
+        outer_id?: string;
+        properties?: Array<{
+            name: string;
+            pic_url: string;
+            value: string;
+        }>;
+    }>;
+    create_time: string;
+    listing_start_time: string;
+    delivery_company_type: number;
+    brand_name: string;
+    remark: string;
+    product_name: string;
+    brand_id: number;
+    product_images: string[];
+    update_time: string;
+    category_id: number;
+    delivery_type: number;
+    product_id: string;
+    delivery_aging: number;
+    listing_end_time: string;
+    fbx: boolean;
+};
+export declare type SkuStock = {
     outer_sku_id?: string;
     sku_id?: string;
     stock_num: number;
